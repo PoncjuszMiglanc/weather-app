@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: pink;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.weather {
+  background-color: rgb(149, 200, 222);
+  width: 500px;
+  height: 100lvh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+/* .weather__head {
+  background-color: rgb(219, 150, 150);
+  margin-top: 2rem;
+} */
+.weather__main {
+  /* background-color: rgb(140, 203, 160); */
+  color: white;
+  /* margin-bottom: 6rem; */
+}
+
+.weather__form {
+  margin: 2rem 0 6rem 0;
+}
+
+.weather__input {
+  outline: none;
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+  border-radius: 25px;
+  padding: 10px 20px;
+  width: 18rem;
+  font-size: inherit;
+  /* text-align: center; */
+}
+
+::placeholder {
+  color: white;
+}
+
+.weather__city {
+  font-size: 1.5rem;
+  /* text-align: left; */
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.weather__temp {
+  font-size: 6rem;
+}
+
+.weather__conditions {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.bottom {
+  background-color: rgb(170, 209, 219);
+  /* border: 2px solid rgb(58, 175, 243); */
+  border-radius: 15px;
+  color: white;
+  margin-bottom: 6rem;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  width: 90%;
+  font-size: 1.3rem;
+}
+
+.bottom__humidity-value,
+.bottom__pressure-value,
+.bottom__wind-value {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 1.4rem;
+}
+
+@media (width < 500px) {
+  .weather {
+    width: 100%;
+    /*na mobilke trzeba to w kolumnie zroić, te na dole i zobacze jeszcze to lvh svh i dvh */
+  }
+}
