@@ -11,9 +11,14 @@ const App = () => {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=2e0f6b976f18ac55b1efc32ce3d3c411&units=metric&lang=pl`;
 
   const getData = () => {
-    axios.get(url).then((response) => {
-      setData(response.data);
-    });
+    axios
+      .get(url)
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) =>
+        alert("Podałeś złą nazwę miasta", error.response.status)
+      );
   };
 
   const submitHandler = (e) => {
@@ -23,12 +28,10 @@ const App = () => {
   };
 
   useEffect(() => {
-    console.log("Mój useEffect");
     myInput.current.focus();
     getData();
   }, []);
 
-  //onload focus zrobmy przy uzyciu refa i useeffect i jednocześnie pierwszy getData request zeby cos sie wyswietliło
   return (
     <>
       <div className="weather">
@@ -51,6 +54,15 @@ const App = () => {
             <p className="weather__conditions">{data.weather[0].description}</p>
           ) : null}
         </div>
+        {data.weather ? (
+          <img
+            src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
+            width={150}
+            height={150}
+            alt="icon"
+          />
+        ) : null}
+
         <div className="bottom">
           <div className="bottom__humidity-box">
             <p className="bottom__humidity-title">Wilgotność powietrza</p>

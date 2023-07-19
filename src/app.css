@@ -5,10 +5,6 @@ body {
   height: 100%;
 }
 
-body {
-  background-color: pink;
-}
-
 *,
 ::before,
 ::after {
@@ -29,14 +25,8 @@ body {
   text-align: center;
 }
 
-/* .weather__head {
-  background-color: rgb(219, 150, 150);
-  margin-top: 2rem;
-} */
 .weather__main {
-  /* background-color: rgb(140, 203, 160); */
   color: white;
-  /* margin-bottom: 6rem; */
 }
 
 .weather__form {
@@ -52,7 +42,6 @@ body {
   padding: 10px 20px;
   width: 18rem;
   font-size: inherit;
-  /* text-align: center; */
 }
 
 ::placeholder {
@@ -61,7 +50,6 @@ body {
 
 .weather__city {
   font-size: 1.5rem;
-  /* text-align: left; */
   margin-bottom: 1rem;
   letter-spacing: 1px;
 }
@@ -78,7 +66,6 @@ body {
 
 .bottom {
   background-color: rgb(170, 209, 219);
-  /* border: 2px solid rgb(58, 175, 243); */
   border-radius: 15px;
   color: white;
   margin-bottom: 6rem;
@@ -100,6 +87,5 @@ body {
 @media (width < 500px) {
   .weather {
     width: 100%;
-    /*na mobilke trzeba to w kolumnie zroić, te na dole i zobacze jeszcze to lvh svh i dvh */
   }
 }
